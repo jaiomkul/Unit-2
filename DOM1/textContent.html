@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">I am Div</div>
+    <div id="masai">I am Masai Student</div>
+    <div id="xyz"><span> am XYZ</span></div>
+    <button onclick="myFun()">Click Change</button>
+</body>
+</html>
+
+<script>
+    //getElementById
+    console.log(document.getElementById("container").textContent);
+    console.log(document.getElementById("masai").textContent);
+    console.log(document.getElementById("xyz").innerHTML);
+
+    function myFun() {
+        document.getElementById("container").innerHTML = "<h1>I am New Div</h1>"
+    }
+
+</script>

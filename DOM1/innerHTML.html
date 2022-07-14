@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">I am Div</div>
+    <div id="masai"><h1>InnneHTMl With tab given output inner tagS</h1>I am Masai Student</div>
+    <div id="xyz"><span> am XYZ</span></div> 
+    
+    <div id="container1">I am Div</div>
+    <div id="container2">I am Div</div>
+    <div id="container3">I am Div</div>
+    <div id="container4">I am Div</div>  
+</body>
+</html>
+
+<script>
+    //getElementById
+    console.log(document.getElementById("container").textContent);
+    console.log(document.getElementById("masai").innerHTML);
+    console.log(document.getElementById("xyz").innerHTML);
+
+    document.getElementById("container1").innerHTML = "I am New Div"
+    document.getElementById("container2").innerHTML = "<h1>I am New Div</h1>"
+    document.getElementById("container3").textContent = "<h1>I am New Div</h1>"
+    document.getElementById("container4").textContent = "I am New Div"
+
+
+</script>

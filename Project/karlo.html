@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>KarLo</h1>
+<form action="">
+
+    <select name="filtpro" id="">
+        <option value="">Refund/option>
+        <option value="">Item missing</option>
+        <option value="">Order Status</option>
+        <option value="">Delivery</option>
+        <option value="">Feedback</option>
+    </select>
+    <b>
+    <input id="text1" type="text" placeholder="Enter">
+    <b>
+    <input id="dat" type="date">
+    <br>
+    <input id="num" type="number">
+    <br>
+    <input type="submit">
+</form>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", karlo);
+    var karloarr=[];
+
+    function karlo(event) {
+        event.preventDefault();
+        var filt= document.querySelector("#filtpro").value;
+        var text= document.querySelector("#text1").value;
+        var numt= document.querySelector("#dat").value;
+        var date= document.querySelector("#num").value;
+
+        var lask={flt:filt, texts:text, number:numt, dates:date};
+
+        karloarr.push(lask);
+        console.log(lask)
+
+    }
+
+    function creat(karloarr){
+        karloarr.map(function(elem){
+        var for = document.createElement("form");
+
+        var t2 = document.createElement("input");
+        td1.textContent=elem.filt;
+        var t2 = document.createElement("select");
+        td1.textContent=elem.texts;
+
+        var t3 = document.createElement("input");
+        td2.textContent=elem.numt;
+
+        var t4 = document.createElement("input");
+        td3.textContent=elem.dates
+
+        form.append(t1,t2,t3,t4);
+
+        document.querySelector("tbody").append(form)
+
+        });
+    }
+
+</script>

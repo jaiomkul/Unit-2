@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin-top: 100px;
+        }
+        #main {
+            display: flex;
+            margin: auto;
+            width: 1000px;
+            
+        }
+        .form {
+            width: 350px;
+            margin: auto;
+        }
+        input {
+            border: 2px solid #000000;
+            width: 300px;
+            height: 40px;;
+            margin: 20px;
+            color: #000000;
+        }
+        button {
+            width: 300px;
+            height: 40px;
+            background-color: #000000;
+            color: white;
+            margin: 20px;
+            border: 0px;
+
+        }
+        label {
+            margin: 20px;
+            color: #000000;
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        .out {
+            color: #da1414;
+            font-size:25px;
+        }
+
+        .output {
+            width: 350px;
+            background-color: #000000;
+            margin: auto;
+
+        }
+
+        
+        .op label{
+            color: #ffffff;
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        .op{
+            margin: 50px;
+        }
+       .op .out {
+            color: #ffffff;
+            font-size: 20px;
+
+        }
+        .op .name {
+            font-size: 40px;
+            text-align: left;
+            display: block;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="main" style="margin: auto; width: ;">
+        <div class="form">
+            <label for="">Name</label>
+            <input type="text">
+
+            <label for="">Email</label>
+            <input type="text">
+
+            <label for="">Number</label>
+            <input type="text">
+            <label class="out">Enter a valid mobile
+            </label>
+
+            <button>REGISTER</button>
+        </div>
+
+        <div class="output">
+            <div class="op">    
+                <label for="">Name</label>
+                <label class="name">MASAI</label>
+            </div>
+
+            <div class="op">
+                <label for="">Email</label>
+                <label class="out">email@masaischool.com</label>
+            </div>
+
+            <div class="op">
+                <label for="">Number</label>
+                <label class="out">9876543210</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

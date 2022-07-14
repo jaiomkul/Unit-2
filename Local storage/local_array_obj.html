@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    //array
+
+    var arr =["html","css","js","react"]
+    arr=JSON.stringify(arr)
+    localStorage.setItem("web",arr)
+    var k=localStorage.getItem("web")
+    k=JSON.parse(k)
+    console.log(k[0])
+
+    //obj
+
+    var obj = {name:"Deepak",Place:"xyz"};
+    //obj=JSON.stringify(obj);
+    //localStorage.setItem("student",obj);
+    localStorage.setItem("student",JSON.stringify(obj));
+
+    //var z1 = localStorage.getItem("student")
+    //z1=JSON.parse(z1);
+   var  z1=JSON.parse(localStorage.getItem("student"))
+    console.log(z1.name)
+
+
+</script>

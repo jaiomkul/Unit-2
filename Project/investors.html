@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            margin: auto;
+            color: black;
+            text-align: center;
+            gap: 20px;
+            margin-top: 100px;
+        }
+        #main > div {
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+
+        @media only screen and (min-width:0px) and (max-width:320px){
+           #main{ 
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4,500px);
+            margin: auto;
+            color: black;
+            text-align: center;
+            gap: 20px;
+            margin-top: 100px;
+           }
+        }
+
+        @media only screen and (min-width:321px) and (max-width:720px){
+           #main{ 
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2,500px);
+            margin: auto;
+            color: black;
+            text-align: center;
+            gap: 20px;
+            margin-top: 100px;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!-- <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg" alt="">
+            <h2>Ankush Sachdeva</h2>
+            <h3>Co-Founder & CEO</h3>
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg" alt="">
+            <h2>Ankush Sachdeva</h2>
+            <h3>Co-Founder & CEO</h3>
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg" alt="">
+            <h2>Ankush Sachdeva</h2>
+            <h3>Co-Founder & CEO</h3>
+        </div>
+        <div>
+            <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg" alt="">
+            <h2>Ankush Sachdeva</h2>
+            <h3>Co-Founder & CEO</h3>
+        </div>         -->
+  </div>
+</body>
+</html>
+
+<script>
+    var invest = [
+        {
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Ankush_Sachdeva_Sharechat_4e44dbbe6b.jpg",
+        name:"Ankush Sachdeva",
+        cam:"Co-Founder & CEO, ShareChat",
+    },
+    {
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/bhanu_pratap_singh_sharechat_11fdd7b47a.jpg",
+        name:"Bhanu Pratap Singh",
+        cam:"Co-Founder & CEO, ShareChat",
+    },
+    {
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/farid_ahsan_sharechat_1251f28141.png",
+        name:"Farid Ahsan",
+        cam:"Co-Founder & COO, ShareChat",
+    },
+    {
+        image:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Amit_Kumar_Agarwal_Nobroker_a8a279ad91.jpg",
+        name:"Amit Kumar Agarwal",
+        cam:"Co-Founder & CEO, Nobroker",
+    },
+
+    ];
+
+    invest.map(function(elem){
+        var div=document.createElement("div");
+
+        var imgs= document.createElement("img");
+        imgs.setAttribute("src",elem.image);
+
+        var h2 = document.createElement("h2");
+        h2.textContent = elem.name;
+
+        var p = document.createElement("p");
+        p.textContent = elem.cam
+
+        div.append(imgs,h2,p)
+        document.querySelector("#main").append(div);
+    })
+
+
+</script>
+

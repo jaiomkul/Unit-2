@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            display: flex;
+            background-color: black;
+
+        }
+        #container > div {
+            height: 200px;
+            width: 200px;
+            margin: 20px;
+            font-size: 30px;
+            border: 1px solid red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
+
+<script>
+   var boxs = document.querySelectorAll("#container > div");
+   //console.log(boxs);
+
+   for(i=0; i<boxs.length; i++)
+   {
+       boxs[i].addEventListener("click", bgChange);
+   }
+   function bgChange(event) {
+       console.log(event.target.textContent);
+       //event.target.style.backgroundColor="red"
+       event.target.style.fontSize ="100px"
+       console.log(event.target.parentNode);
+       //event.target.parentNode.style.backgroundColor="yellow"
+       //event.target.previousElementSibling.style.backgroundColor="green"
+       event.target.nextElementSibling.style.backgroundColor="green"
+   }
+</script>

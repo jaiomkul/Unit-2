@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inputTag" type="text" placeholder="Enter Input" value="">
+    <button onclick="getValue()"> Get Values </button>
+    <input id="inputTag1" type="text" placeholder="Enter Input" value="">
+    <button onclick="getValue1()"> Get Values </button>
+<br>
+<br>
+<br>
+    <select name="" id="selectId">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <button onclick="getvalue2()">Get value</button>
+</body>
+</html>
+
+<script>
+    function getValue() {
+        var res = document.getElementById("inputTag").value;
+        alert(res);
+    }
+    function getValue1() {
+        var res = document.getElementById("inputTag1").value;
+        console.log(res);
+    }
+
+function getvalue2() {
+    var res1 = document.getElementById("inputTag").value;
+
+    var res2 = document.getElementById("inputTag1").value;
+
+    var res = document.getElementById("selectId").value;
+    console.log(res, res1, res2);
+}
+
+</script>

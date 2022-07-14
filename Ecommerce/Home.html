@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container1 {
+            display: flex;
+            width: 100%;
+            background-color: rgb(28, 41, 117);
+            color: white;
+            border-radius: 20px;
+            padding: 25px 0 0 20px;
+            height: 50px;
+
+
+        }
+        .left {
+            width: 70%;
+        }
+        .right {
+            display: flex;
+            justify-content: space-around;
+            width: 30%;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: auto;
+        margin-left: 180px;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <div class="left">Reebook</div>
+        <div class="right">
+            <div><a href="about.html" target="_black">About</a></div>
+            <div id="men">Men</div>
+            <div onclick="window.location.href='women.html'">Women</div>
+            <div id="login">Login</div>
+            <div onclick="window.location.href='signUp.html'">SignUp</div>
+        </div>
+    </div>
+<div id="container"></div>
+</body>
+</html>
+
+<script>
+
+
+
+
+//let url = "https://fakestoreapi.com/products/1";
+
+// let myRequest = fetch(url);
+// //console.log("x", x)
+
+// myRequest.then(function(res){
+//     return res.json();
+// });
+
+// .then(function(res){
+//     console.log("res:", res)
+// });
+// .catch(function(err){
+//     console.log("err:", err)
+// });
+
+let url = "https://fakestoreapi.com/products";
+const container = document.getElementById('container')
+
+async function getData() {
+
+    try{
+        let res = await fetch(url);
+
+        let data = await res.json();
+        appendProducts(data)
+
+        console.log("data:", data)
+    } catch (err) {
+        console.log("err:", err)
+    }
+}
+
+getData();
+
+function appendProducts(data) {
+    data.map(function(el){
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+
+        img.src = el.image;
+
+        let title = document.createElement("p")
+
+        title.innerText = el.title;
+
+        let price = document.createElement("p")
+
+        price.innerText = el.price;
+
+        div.append(img,title,price)
+
+        container.append(div);
+        console.log(container)
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+    // 1st method calling cfunction and write
+    // document.getElementById("men").addEventListener("click",myFunction)
+
+    // function myFunction(){
+
+    // }
+    //second method direct creat function
+
+    document.getElementById("men").addEventListener("click",function(){
+        window.location.href="men.html";
+    });
+
+    document.getElementById("login").addEventListener("click",function(){
+        window.location.href="login.html";
+    });
+
+    localStorage.setItem("name","Masai School");
+
+</script>

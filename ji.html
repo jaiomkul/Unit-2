@@ -1,0 +1,13 @@
+let newInput = input.trim().split("\n");
+
+for (let i = 1; i < newInput.length; i++) {
+  let hook = newInput[i].split(" ").map(Number);
+  let row = hook[0];
+  let col = hook[1];
+  let matrix = [];
+  for (let j = i + 1; j <= row + i; j++) {
+    matrix.push(newInput[j].split(" ").map(Number));
+  }
+  i += row;
+  console.log(matrix);
+}

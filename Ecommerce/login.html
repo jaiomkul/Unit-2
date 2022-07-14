@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id="name" type="text" placeholder="Enter User Name">
+        <input id="pass" type="password" placeholder="Enter password">
+        <input type="submit" value="Login">
+    </form>
+</body>
+
+<script>
+    document.querySelector("form").addEventListener("submit", signIn);
+
+    var regUser = JSON.parse(localStorage.getItem("userDataBase"));
+
+    function signIn(event) {
+        event.preventDefault();
+        var name = document.querySelector("#name").value;
+        var pass = document.querySelector("#pass").value;
+
+        for(var i=0; i<regUser.length; i++)
+        {
+            console.log(regUser[i].userName,regUser[i].passWord);
+            if(regUser[i].userName==name && regUser[i].passWord==pass){
+            window.location.href="Home.html"
+            }
+        }
+        
+
+
+    }
+</script>

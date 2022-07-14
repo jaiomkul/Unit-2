@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 100px 300px;
+            grid-gap: 30px;
+            grid-template-areas: 
+               "a a a a a a a a a a a a"
+               "b b b c c c d d d e e e"
+            ;
+        }
+
+        #main > div {
+            padding: 30px;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #main > div:nth-child(1){
+            grid-area: a;
+            background-color: yellow;
+
+        }
+        #main > div:nth-child(2){
+            grid-area: b;
+            background-color: #FF0000;
+        }
+        #main > div:nth-child(3){
+            grid-area: c;
+            background-color: #00FF2A;
+        }
+        #main > div:nth-child(4){
+            grid-area: d;
+            background-color: #5763EE;
+        }
+        #main > div:nth-child(5){
+            grid-area: e;
+            background-color: #989898;
+        }
+
+         /* small screen */
+
+    @media only screen and (min-width: 0px) and (max-width: 320px) {
+        #main {
+            grid-template-rows: 50px 100px 100px 100px 100px;
+            grid-template-areas: 
+               "a a a a a a a a a a a a"
+               "b b b b b b b b b b b b"
+               "c c c c c c c c c c c c"
+               "d d d d d d d d d d d d"
+               "e e e e e e e e e e e e";
+        }
+    }
+
+    /* medium screen */
+
+    @media only screen and (min-width: 321px) and (max-width: 720px) {
+        #main {
+            grid-template-rows: 100px 200px 200px;
+            grid-template-areas: 
+               "a a a a a a a a a a a a"
+               "b b b b b b c c c c c c"
+               "d d d d d d e e e e e e"
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="nav">Navigation</div>
+        <div class="box1">Box 1</div>
+        <div class="box2">Box 2</div>
+        <div class="box3">Box 3</div>
+        <div class="box4">Box 4</div>
+    </div>
+</body>
+</html>

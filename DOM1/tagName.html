@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head >
+<body>
+    <div id="main">
+        <h1>Hi How Are You Bro</h1>
+        <p>vcLASS No Bhai AAj Machayege Bhai</p>
+        <p>A cLASS No Bhai AAj Machayege Bhai</p>
+        <p class="head">dcLASS No Bhai AAj Machayege Bhai</p>
+        <p class="head"> ncLASS No Bhai AAj Machayege Bhai</p>
+        <p class="head"> lcLASS No Bhai AAj Machayege Bhai</p>
+        <p class="head"> gcLASS No Bhai AAj Machayege Bhai</p>
+        <h1 id="head1">ID Haa Na public Machayege</h1>
+        </div>
+</body>
+</html>
+<script>
+    //tag Name
+    var x = document.getElementsByTagName("p");
+    console.log(x.length);
+
+    for(var i=0; i<x.length; i++)
+    {
+        console.log(x[i].textContent);
+    }
+
+</script>

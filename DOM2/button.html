@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: black;
+        }
+        #main {
+            margin-top: 300px;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+
+            
+        }
+        button {
+            padding: 5px;
+            margin: 20px;
+            color: white;
+            border: 0;
+            width: 150px;
+            height: 50px;
+            font-size: 25px;
+        }
+
+        button:nth-child(1)
+        {
+            background-color: #0D6EFD;
+        }
+
+        button:nth-child(2)
+        {
+            background-color: #6C757D;
+        }
+
+        button:nth-child(3)
+        {
+            background-color: #198754;
+        }
+
+        button:nth-child(4)
+        {
+            background-color: #DC3545;
+        }
+
+        button:nth-child(5)
+        {
+            background-color: #FFC008;
+        }
+
+        button:nth-child(6)
+        {
+            background-color: #11CAF0;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!-- <button>Primary</button>
+        <button>Secondary</button>
+        <button>Success</button>
+        <button>Danger</button>
+        <button>Warning</button>
+        <button>Info</button> -->
+    </div>
+</body>
+</html>
+
+<script>
+    var button =[{name:"Primary"},
+                 {name:"Secondary"},
+                 {name:"Success"},
+                 {name:"Danger"},
+                 {name:"Warning"},
+                 {name:"Info"},];
+
+    button.map(function(elem){
+        var btn=document.createElement("button");
+        btn.textContent=elem.name;
+        document.querySelector("#main").append(btn);
+        
+    })
+    // var btn1 = document.createElement('button');
+    // var btn2 = document.createElement('button');
+    // var btn3 = document.createElement('button');
+    // var btn4 = document.createElement('button');
+    // var btn5 = document.createElement('button');
+    // var btn6 = document.createElement('button');
+
+    // btn1.textContent = "Primary";
+    // btn2.textContent = "Secondary";
+    // btn3.textContent = "Success";
+    // btn4.textContent = "Danger";
+    // btn5.textContent = "Warning";
+    // btn6.textContent = "Info";
+
+    //document.querySelector("#main").append(btn1,btn2,btn3,btn4,btn5,btn6);
+</script>

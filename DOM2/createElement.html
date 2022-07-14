@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display: flex;
+            width: 40%;
+            margin: auto;
+            margin-top: 100px;
+            font-family:'Courier New', Courier, monospace;
+        }
+        img {
+            width: 250px;
+            height: 300px;
+            margin-left: 
+            20px;
+        }
+        div  {
+            margin-left: 30px;
+            text-align: justify;
+            font-size: 20px;
+        }
+        button {
+            padding: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main">
+        <!-- <img src="https://monstar-lab.com/global/wp-content/uploads/sites/11/2019/04/male-placeholder-image.jpeg" alt="">
+        <div class="inner">
+            <h1>Alice Libble</h1>
+            <p>Alice is a freelance web designer
+            and developer based in London.
+            She is specialized in HTMLS, CSS3,
+            JavaScript, Bootstrap, etc.</p>
+            <button>View Profile</button>
+        </div> -->
+    </div>
+</body>
+</html>
+
+<script>
+    var box = document.createElement("div")
+    var image = document.createElement("img");
+    image.setAttribute("src", "https://monstar-lab.com/global/wp-content/uploads/sites/11/2019/04/male-placeholder-image.jpeg");
+
+    var head1 = document.createElement("h1");
+    head1.textContent = "Alice Libble";
+
+    var para = document.createElement("p");
+    para.textContent = "Alice is a freelance web designer and developer based in London. She is specialized in HTMLS, CSS3, JavaScript, Bootstrap, etc.";
+
+
+    var button = document.createElement("button");
+    button.textContent = "View Profile";
+
+    box.append(head1,para,button)
+    
+    document.querySelector("#main").append(image,box)
+
+
+</script>

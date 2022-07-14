@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            
+           
+            
+        }
+        .col-50{
+            -ms-flex: 25%;
+            flex: 25%;
+        }
+input[type=text]{
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: black;
+    border-radius: 3px;
+   
+   
+   
+  
+}
+h2{
+    color: rgb(203,203,203);
+    margin-top: -12px;
+    
+}
+#save{
+    width: 200px;
+    height: 30px;
+    border: 1px solid;
+    background-color: red;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-radius: 7px;
+    color:black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.box{
+    margin-left: 100px;
+   
+   
+  
+
+}
+label{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    
+}
+.container>div{
+   
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width:400px;
+  
+    
+}
+iframe{
+    margin-left: 530px;
+    margin-top: -1000px;
+    margin-bottom: 200px;
+    height: 1000px;
+    width: 400px;
+    
+    
+}
+
+    </style>
+</head>
+<body>
+    
+        <div class="box">
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+<div style="padding: 15px;">
+<form action="/action_page.php">
+<div class="row">
+    <div class="col-50">
+        <h2>Add New Address</h2>
+
+        <div>
+        <label for="location">Location
+        </label>
+         <input type="text"id="location"name="location"placeholder="Enter location">
+        </div>
+
+        <div>
+         <label for="location">Flat No/Building Name/Street Name
+         </label>
+          <input type="text"id="location"name="location"placeholder="Flat no/Building Name/Street Name">
+        </div>
+
+        <div>
+          <label for="landmark">Landmark
+          </label>
+           <input type="text"id="landmark"name="landmark"placeholder="Landmark(optional)">
+        </div>
+
+        <div>
+           <label for="city">City
+           </label>
+           <input type="text"id="city"name="city"placeholder="City">
+        </div>
+
+        <div>
+           <label for="mobile_number">Mobile Number
+           </label>
+            <input type="text"id="number"name="mobile number"placeholder="Mobile Number">
+        </div>
+
+        <div>
+       <label for="email">Email
+       </label>
+              <input type="text"id="email"name="Email ID"placeholder="Enter Email">
+            </div>
+
+            <div>
+              <label for="name">Name
+              </label>
+               <input type="text"id="landmark"name="landmark"placeholder="Enter Full name">
+            </div>
+            <div>
+                <a id="save" href="payment.html">Save and Proceed</a>
+                <br>
+                <br>
+                <b style="cursor:pointer; ">Back</b>
+            </div>
+              
+                </form>
+                
+                
+            </div>
+
+                                                                                              
+            </div>  
+
+    </div>      
+
+</div>
+</form>
+
+
+</div>
+</div>
+</div>  
+<div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.8865403854!2d77.49085209765133!3d12.95395998682417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1642515214129!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+
+    
+</div>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+    document.getElementById("select").onclick = function () {
+        location.href = "payment.html";
+    };
+</script>
